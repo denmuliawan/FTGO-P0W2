@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masukan nilai</title>
+</head>
+<body>
+    
+    <script>
+    
+    function hitungGrade(){
+        var UserInput = prompt ("masukan angka 1 sampai 100")
+
+        var userScore = parseInt(UserInput);
+
+        if (userScore >=1 && userScore <= 100){
+
+            if (userScore >=80 && userScore <=100){
+                alert("Grade A");
+            } else if(userScore >=60 && userScore <=100){
+                alert("grade B");
+            } else if (userScore >=40 && userScore <=100){
+                alert("Grade C")
+            } else {
+                alert("Grade E");
+            }
+                
+            } else {
+                alert("isi angka yang benar")
+            }
+        }
+
+        hitungGrade();
+
+    </script>
+    
+</body>
+</html>

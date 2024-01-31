@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laatihan Conditional Javascript</title>
+</head>
+<body>
+    
+    <script>
+
+        var nilai = prompt("masukan nilai");
+
+        nilai = parseFloat(nilai);
+
+        // kondisional
+        var resultContainer = document.createElement('div')
+        // logic
+        if (!isNaN(nilai)){
+            if (nilai>=70){
+                // document.write("Anda apaan dah");
+                resultContainer.innerHTML = "Anda apaan dah";
+            } else {
+                // document.write("Anda gagal");
+                resultContainer.innerHTML = "Anda gagal";
+            }
+        } else {
+            // document.write("Input Salah, Yang bener kenapa");
+            resultContainer.innerHTML = "Input Salah, yang bener kenapa";
+        }
+
+        // masukkan hasil ke dalam body
+        document.body.appendChild(resultContainer);
+
+    </script>
+
+</body>
+</html>
