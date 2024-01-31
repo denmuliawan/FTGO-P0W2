@@ -1,0 +1,123 @@
+<!-- 
+Looping : Perulangan
+- FOR LOOPING   -> kita tau kapan harus berhenti
+    - FOR
+        for (statement 1; statement 2; statement 3) {
+            action
+        }
+
+        Notes :
+        - Statement 1 : initiate / inisiasi. Example : var i = 0; let j = 10;
+        - Statement 2 : condition. -> compare / logical. Example : i < 10; j > 5
+        - Statement 3 : increment (++) / decrement (--). i++ -> 1 2 3
+
+    - FOR EACH
+        Ada 2 step :
+
+        STEP 1 : buat for each
+        nama_array.forEach(nama_function)
+
+        STEP 2 : buat function
+        function nama_function(nama_variable_baru) {
+            action
+        }
+
+
+    - REPEAT
+        nama_variable.repeat(total_perulangan)
+
+    - Nested Looping : Looping di dalam looping
+
+- WHILE LOOPING -> kita belum tau kapan harus berhenti
+    - WHILE     -> di check dulu baru dicoba
+        
+        initiate_variable
+        while(condition) {
+            action
+            increment/decrement
+        }
+
+    - DO WHILE  -> dicoba dulu baru di check 
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hello world")
+
+        // FOR - print 10 - 15
+        for(var i = 10; i <= 15; i++) {
+            console.log(i)
+        }
+
+        /*
+        10 <= 15 -> TRUE
+        10 + 1 = 11
+
+        11 <= 15 -> TRUE
+        11 + 1 = 12
+
+        15 <= 15 -> TRUE
+        15 + 1 = 16
+
+        16 <= 15 -> FALSE -> PROGRAM BERHENTI
+        */
+
+
+        // FOR EACH - initiate array
+        var names = ["panji", "budi", "anto"]
+        names.forEach(menyapa)                    // "menyapa" adalah nama function
+
+        function menyapa(orang) {                 // "orang" adalah variable baru untuk menampung "panji", "budi", dan "anto"
+            console.log("Halo", orang)
+        }
+
+        // Repeat
+        var name = "panji\n"                   // "\n" digunakan untuk ENTER
+        console.log(name.repeat(10))       
+
+        // Nested Looping
+        for (var i = 1; i <= 5; i++) {
+            // 1 
+            // 2 ...
+            // 5
+            for (var j = 10; j <= 15; j++) {
+                // 1 10
+                // 1 11 ...
+                // 1 15
+                // 2 10
+                // 2 11 ...
+                // 2 15
+                // 5 10
+                // 5 11 ...
+                // 5 15
+                console.log(i, j)
+            }
+        }
+
+        // WHILE LOOPING - print 2 sampai 7
+        var angka = 2
+        while(angka <= 7) {
+            console.log("WHILE", angka)
+            angka++
+        }
+
+        var angka = 2
+        // DO WHILE - print 2 sampai 2
+        do {
+            console.log("DO WHILE", angka)
+            angka++
+        } while(angka <= 7)
+
+
+    </script>
+</body>
+</html>
