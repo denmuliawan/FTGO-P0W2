@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // <!--pengelompokan angka  -->
+        
+        var a = [0,1,2,3,4,5,6,7,8,9];
+        var genap = [];
+        var ganjil = [];
+        var kelipatan3 = [];
+
+        for(var b = 0; b <a.lenght; b++){
+            if(a[b] % 2 == 0){
+                genap.push(a[b]);
+            } else {
+                ganjil.push(a[b]);
+            }
+            
+            if(a[b] % 3 == 0){
+                kelipatan3.push(a[b]);
+            }
+        }
+
+console.log(genap + " genap");
+console.log(ganjil + " ganjil");
+console.log(kelipatan3 + " kelipatan 3");
+
+
+
+    </script>
+</body>
+</html>
